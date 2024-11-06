@@ -253,7 +253,32 @@ console.log('------------------------------');
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+console.log('ESERCIZIO 9');
+
+const newCharactersNames = JSON.parse(JSON.stringify(charactersNames));
+console.log('Before:');
+console.log(charactersNames);
+
+for (let i = 0; i < femaleCharacters.length; i++) {
+  for (let j = 0; j < newCharactersNames.length; j++) {
+    if (femaleCharacters[i].name === newCharactersNames[j]) {
+      newCharactersNames.splice(j, 1);
+    }
+  }
+}
+
+console.log('After:');
+console.log(newCharactersNames);
+
+console.log('------------------------------');
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+console.log('ESERCIZIO 10');
+
+let indexCharacter = 0;
+
+console.log(
+  `The character ${starWarsCharacters[indexCharacter].name} is ${starWarsCharacters[indexCharacter].height}cm high and has a mass of ${starWarsCharacters[indexCharacter].mass}. It has ${starWarsCharacters[indexCharacter].hair_color} hair, ${starWarsCharacters[indexCharacter].skin_color} skin and ${starWarsCharacters[indexCharacter].eye_color} eyes. It's born in ${starWarsCharacters[indexCharacter].birth_year} and it's a ${starWarsCharacters[indexCharacter].gender}`
+);
