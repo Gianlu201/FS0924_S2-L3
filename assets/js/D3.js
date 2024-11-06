@@ -278,7 +278,8 @@ console.log('------------------------------');
 console.log('ESERCIZIO 10');
 
 let indexCharacter = 0;
+let selectedCharacter = starWarsCharacters[indexCharacter];
 
 console.log(
-  `The character ${starWarsCharacters[indexCharacter].name} is ${starWarsCharacters[indexCharacter].height}cm high and has a mass of ${starWarsCharacters[indexCharacter].mass}. It has ${starWarsCharacters[indexCharacter].hair_color} hair, ${starWarsCharacters[indexCharacter].skin_color} skin and ${starWarsCharacters[indexCharacter].eye_color} eyes. It's born in ${starWarsCharacters[indexCharacter].birth_year} and it's a ${starWarsCharacters[indexCharacter].gender}`
+  `The character ${selectedCharacter.name} is ${selectedCharacter.height}cm high and has a mass of ${selectedCharacter.mass}. It has ${selectedCharacter.hair_color} hair, ${selectedCharacter.skin_color} skin and ${selectedCharacter.eye_color} eyes. It's born in ${selectedCharacter.birth_year} and it's a ${selectedCharacter.gender}`
 );
